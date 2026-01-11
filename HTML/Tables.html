@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables in HTML</title>
+</head>
+<body>
+    <h1>Tables in HTML</h1>
+    <p>Tables are used to organize data in rows and columns.</p>
+        <table border="1">
+        <caption>Sample Table</caption>
+        <thead>
+            <tr>
+                <th>Header 1</th>
+                <th>Header 2</th>
+                <th>Header 3</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Row 1, Cell 1</td>
+                <td>Row 1, Cell 2</td>
+                <td>Row 1, Cell 3</td>
+            </tr>
+            <tr>
+                <td>Row 2, Cell 1</td>
+                <td>Row 2, Cell 2</td>
+                <td>Row 2, Cell 3</td>
+            </tr>
+            <tr>
+                <td>Row 3, Cell 1</td>
+                <td>Row 3, Cell 2</td>
+                <td>Row 3, Cell 3</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">Table Footer</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <h3>Table Elements Explained</h3>
+    <ul>
+        <li><strong>&lt;table&gt;</strong>: Defines the table.</li>
+        <li><strong>&lt;caption&gt;</strong>: Provides a title for the table.</li>
+        <li><strong>&lt;thead&gt;</strong>: Groups the header content in a table.</li>
+        <li><strong>&lt;tbody&gt;</strong>: Groups the body content in a table.</li>
+        <li><strong>&lt;tfoot&gt;</strong>: Groups the footer content in a table.</li>
+        <li><strong>&lt;tr&gt;</strong>: Defines a row in the table.</li>
+        <li><strong>&lt;th&gt;</strong>: Defines a header cell in a table.</li>
+        <li><strong>&lt;td&gt;</strong>: Defines a standard cell in a table.</li>
+    </ul>
+
+    <h3>Merging Cells</h3>
+    <p>Cells can be merged using the `colspan` and `rowspan` attributes.</p>
+    <table border="1">
+        <tr>
+            <th>Header 1</th>
+            <th colspan="2">Header 2 (colspan=2)</th>
+        </tr>
+        <tr>
+            <td rowspan="2">Row 1-2, Cell 1 (rowspan=2)</td>
+            <td>Row 1, Cell 2</td>
+            <td>Row 1, Cell 3</td>
+        </tr>
+        <tr>
+            <td>Row 2, Cell 2</td>
+            <td>Row 2, Cell 3</td>
+        </tr>
+</body>
+</html>
