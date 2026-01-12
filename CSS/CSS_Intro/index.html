@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Practice</title>
+    <!-- External CSS  -->
+
+    <link rel="stylesheet" href="styles.css">
+    <!-- Style -element where we can add styles -->
+    <style>
+        h1 {
+            color: blue;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        .internal {
+            color: blue;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Practice Page</h1>
+    <p>This is a sample page to practice CSS styling.</p>
+    <p>Style tag should be added to the header</p>
+    <br/>
+    <hr/>
+    <br>
+    <h1>Type of css</h1>
+    <ul>
+        <li>Inline CSS - using style attribute inside html tags</li>
+        <li>Internal CSS - using style tag inside head element</li>
+        <li>External CSS - using external .css file linked to html using link tag</li>
+
+    </ul>
+    <br/>
+    <hr/>
+    <br>
+    <h1>CSS Priority</h1>
+    <p style="color: red; font-size: 20px;">This paragraph uses inline CSS and will be red and 20px in size.</p>
+    <p class="internal">This paragraph uses internal CSS and will be blue and 16px in size.</p>
+    <p>This paragraph has no specific CSS applied and will use default styles.</p>
+    <p class="external">This paragraph uses external CSS.</p>
+    <br/>
+    
+    <h1>CSS Comments</h1>
+    <p>
+        /* This is a CSS comment. It will not be displayed in the browser. */   
+    </p>
+
+    <h1>CSS Syntax</h1>
+    <p>
+        selector {
+            property: value;
+        }   
+    </p>
+
+    <p> Selector priority</p>
+    <ol>
+        <li>Inline CSS</li>
+        <li>Internal CSS</li>
+        <li>External CSS</li>
+    </ol>
+
+    <br/>
+    <h1>decendent selector</h1>
+    <p>
+        A decendent selector selects all elements that are descendants of a specified element.
+    </p>
+    <h1>Child Selector</h1>
+    <p>
+        A child selector selects all elements that are direct children of a specified element.  
+    </p>
+    
+</body>
+</html>

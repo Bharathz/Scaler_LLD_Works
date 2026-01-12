@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS_Selectors</title>
+</head>
+<body>
+    <h1>CSS Selectors</h1>
+    <p>CSS selectors are used to "find" (or select) the HTML elements you want to style.</p>
+    <h2>Types of CSS Selectors</h2>
+    <ul>
+        <li><strong>Universal Selector (*)</strong>: Selects all elements on the page.
+            <pre>* {
+    color: green;   
+}</pre>
+        </li>
+        <li><strong>Type Selector</strong>: Selects all elements of a given type.
+            <pre>p {
+    font-size: 18px;
+}</pre>
+        </li>
+        <li><strong>Class Selector</strong>: Selects all elements with a specific class attribute.
+            <pre>.example { 
+    background-color: yellow;
+}</pre>
+        </li>
+        <li><strong>ID Selector</strong>: Selects a single element with a specific ID attribute.
+            <pre>#unique {
+    border: 2px solid black;
+}</pre>
+        </li>
+        <li><strong>Attribute Selector</strong>: Selects elements based on an attribute or attribute value.
+            <pre>a[target="_blank"] {   
+    color: red;
+}</pre>
+        </li>
+        <li><strong>Pseudo-class Selector</strong>: Selects elements based on their state.
+            <pre>a:hover {
+    text-decoration: underline;
+}</pre>
+        </li>
+        <li><strong>Descendant Selector</strong>: Selects elements that are descendants of a specified element.
+            <pre>div p {
+    margin-left: 20px;
+}</pre>
+        </li>
+        <li><strong>Child Selector</strong>: Selects elements that are direct children of a specified element.
+            <pre>ul > li {
+    list-style-type: square;
+}</pre>
+        </li>   
+        <li><strong>Adjacent Sibling Selector</strong>: Selects an element that is immediately preceded by a specified element.
+            <pre>h2 + p {   
+    font-weight: bold;
+}</pre>
+        </li>
+        <li><strong>General Sibling Selector</strong>: Selects all elements that are siblings of a specified element.
+            <pre>h2 ~ p {
+    color: purple;
+}</pre>
+        </li>
+    </ul>
+    <h2>Example Usage</h2>
+    <style>
+        .example {
+            background-color: yellow;
+        }
+        #unique {
+            border: 2px solid black;
+        }
+        a[target="_blank"] {
+            color: red;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        div p {
+            margin-left: 20px;
+        }
+        ul > li {
+            list-style-type: square;
+        }
+        h2 + p {
+            font-weight: bold;
+        }
+        h2 ~ p {
+            color: purple;
+        }
+    </style>
+    <div>
+        <p class="example">This paragraph has a yellow background (Class Selector).</p>
+        <p id="unique">This paragraph has a black border (ID Selector).</p>
+        <a href="#" target="_blank">This link is red (Attribute Selector).</a>
+        <h2>Hover over this heading</h2>
+        <p>This paragraph becomes underlined when the link is hovered (Pseudo-class Selector).</p>
+        <div>
+            <p>This paragraph is indented (Descendant Selector).</p>
+        </div>
+        <ul>
+            <li>This list item has a square bullet (Child Selector).</li>
+        </ul>
+        <h2>Heading 2</h2>
+        <p>This paragraph is bold (Adjacent Sibling Selector).</p>
+        <p>This paragraph is purple (General Sibling Selector).</p>
+    </div>
+    
+</body>
+</html>  
