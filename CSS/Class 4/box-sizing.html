@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Sizing</title>
+    <style>
+        .content-box {
+            width: 200px;
+            height: 200px;
+            padding: 20px;
+            border: 10px solid black;
+            margin: 15px;
+            box-sizing: border-box; /* Try changing this to content-box */
+            background-color: lightgray;
+        }
+        .border-box {
+            width: 200px;
+            height: 200px;
+            padding: 20px;
+            border: 10px solid black;
+            margin: 15px;
+            box-sizing: content-box; /* Try changing this to border-box */
+            background-color: lightcoral;
+        }   
+        /* box sizing : content-box vs border-box */
+        /* content-box: width and height include only the content */
+        /* border-box: width and height include padding and border */
+    </style>
+</head>
+<body>
+    <div class="content-box"></div>
+    <div class="border-box"></div>
+</body>
+</html>
