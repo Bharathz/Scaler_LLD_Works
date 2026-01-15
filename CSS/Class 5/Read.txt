@@ -1,0 +1,54 @@
+Resposive layout:
+
+Web 1.0 --> Information Read only
+Web 2.0 --> User intraction (CRUD)
+Web 3.0 --> Ownership (Like decentralization, Crypto, blockchain, NFT)
+
+
+Still using Web 2.0:
+Client system (Different types)
+Youtube -->
+Repo - mobile
+Repo - Laptop
+Repo - Desktop
+
+So We use Responsive layout
+Screensize (View port size)
+
+1.Flex box
+2.Grid
+3.Media Query
+
+No need to use all of them but need to use as per requirement
+
+Flex is commonly used in most of the responsive website
+Help to design in 2d layout
+X and Y axis.
+
+Applied on container --> Div
+Applied on Item --> div | session | p
+
+Flex direction (row is default)
+row --> main axis is x, and  cross axis is Y
+column --> main axis is y, and  cross axis is X.
+
+Justify-content --> against main axis
+center
+flex-start
+flex-end
+space-evenly -> Equal space is added on lef and rigt of Item
+space-around -> the space before first and last item are same 
+space-between 
+
+Align-item --> Aranging the item against cross axis
+center
+baseline
+
+Flex overrides all the default properties
+irrespective of block elements
+
+Flex-wrap
+
+flex-flow
+
+
