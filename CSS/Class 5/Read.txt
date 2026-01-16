@@ -52,3 +52,10 @@ Flex-wrap
 flex-flow
 
 
+
+flex-direction
+justify-content
+Align-items
+gap
+flex-wrap
+
