@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout</title>
+</head>
+<style>
+    *{
+        padding:0;
+        margin:0;
+    }
+
+    body{
+        display: grid;
+        height:100vh;
+        grid-template-columns: 20% 1fr 70px;
+        grid-template-rows: 80px 1fr 15%;
+        gap:10px;
+        grid-template-areas: "head head head"
+                             "nav content ads"
+                             "nav foot foot";
+    }
+
+    header,
+    article,
+    nav,
+    aside,
+    footer{
+        padding:8px;
+        background-color: aqua;
+        border: 1px solid black;
+    }
+
+    .pageheader{
+        grid-area: head;
+    }
+
+    .mainArticle{
+        grid-area: content;
+    }
+    .mainNav{
+        grid-area: nav;
+    }
+    .siteAds{
+        grid-area: ads;
+    }
+    .pageFooter{
+        grid-area: foot;
+    }
+
+    @media only screen and (max-width:425px) {
+        body{
+            grid-template-columns: 1fr;
+            grid-template-rows: 80px 1fr 70px 1fr 15%;
+            grid-template-areas: "head"
+                                 "nav"
+                                 "content"
+                                 "ads"
+                                 "foot";
+            gap: 5px;
+        }
+    }
+</style>
+<body>
+    <header class="pageheader">Header</header>
+    <article class="mainArticle">Content Area</article>
+    <nav class="mainNav">Nav / Sidebar</nav>
+    <aside class="siteAds">Ads</aside>
+    <footer class="pageFooter">Footer</footer>
+</body>
+</html>

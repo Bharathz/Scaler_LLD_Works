@@ -1,3 +1,8 @@
 Grid in cross
 
 Grid --> 2d
+
+Auto-fill -->Grid tries to create max possible column traces. Also creates empty traces
+
+
+Auto-fit -->Fit according to the main container.
