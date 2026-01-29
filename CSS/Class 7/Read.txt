@@ -3,3 +3,7 @@ Cascade
 Specificity
 Inheritance
 Position
+
+3 ways CSS can be used : Inline, Internal ,  External
+
+Inline --> Internal / External (Tob down approach)
