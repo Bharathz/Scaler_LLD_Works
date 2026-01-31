@@ -7,3 +7,61 @@ Position
 3 ways CSS can be used : Inline, Internal ,  External
 
 Inline --> Internal / External (Tob down approach)
+
+What if there is CSS conflict --> It determine bases on "Specificity" --> Specificity / !important
+
+Specificity:
+Inline > ID Selector > class Selector > Element Selector
+
+Test check th priority:
+.Test --> 010
+h1.Test -->011
+#try-->100
+h1-->001
+
+answer: 3 ,2 ,1,4
+
+Inheritance
+-------------
+
+Non inherit properties:
+width,height
+box model
+background
+display
+
+these properties applies on box / container level
+
+properties that can be inherit:
+text,color,font,text-align,etc...
+
+
+inherit, initial , unset (act as both inherit/initial)
+
+color: unset -> inherit
+width : unset -> initial
+--------------------------------
+
+Position:
+Detail document flow of html
+top to botom
+
+when ther is need top change default position of element we go for position propertiy.
+
+Position:
+static (default)
+relative
+absolute
+fixed
+sticky
+
+Relative position -> Acts relative to current/default position/old position
+Absolute position -> Acts relative to its parent position/body/viewport
+
+the position only change whe applied top,left,right and bottom.
+
+absolute:
+wrt body
+wrt parentelement -> who is having position : relative
+
+relative: moves wrt to old position
