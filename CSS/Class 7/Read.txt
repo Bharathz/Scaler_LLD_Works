@@ -65,3 +65,8 @@ wrt body
 wrt parentelement -> who is having position : relative
 
 relative: moves wrt to old position
+
+fixed: work wrt to parent container irrespective of scroll position of element fixed
+
+sticky: works wrt to parent container, sticky works like fixed when you try to scroll away the element.
+
