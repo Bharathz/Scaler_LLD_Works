@@ -1,0 +1,40 @@
+JavaScript
+
+Web 1.0 -> html + CSS
+Web 2.0 -> intractivity on web + JS (Dom API) -> Eich -> Netscape
+
+Microsoft -> VBscript for internet explorer
+
+JS -> Created as a cross browser Scripting language
+ECMA -> European Computer Manufature Association
+
+Dynamically typed language
+
+Datatypes & Variables
+
+var -> Eich
+let, const -> es6 (ECMA 2015)
+
+Datatype catagorization:
+Primitive
+non-Primitive
+
+Primitive:
+number
+String
+null 
+undefined
+boolean
+nigint
+symbol
+
+Non-primitive:
+Array
+objects
+functions
+map
+Set
+weak map
+weak Set
+
+
