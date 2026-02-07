@@ -1,0 +1,77 @@
+belongs to browser/node:
+console.log() 
+document.getElementByID() 
+
+For node/Browser: (host)
+Api/objects
+provided by Env
+(browser/nod js: console, dom, fetch api | window, global)
+
+For JS: (native)
+Api/objects
+Provided by language 
+Js : Array, Object, Promises, (Map,set)
+
+Host vs Native
+
+In JavaScript, native objects are standard, built-in objects defined in the ECMAScript specification, 
+while host objects are provided by the runtime environment (such as a web browser or Node.js) to extend the language's capabilities. 
+
+------------------------------------------------------------------------------------------------------------
+
+Native Objects
+
+Native objects are the fundamental building blocks of the JavaScript language itself. 
+They are always available and behave consistently across any environment that has an ECMAScript-compliant engine. 
+Availability: Available in all JavaScript environments.
+Definition: Defined in the ECMAScript specification.
+Examples:
+Object (constructor)
+Array
+String
+Math
+Date
+RegExp
+JSON 
+
+------------------------------------------------------------------------------------------------------------
+
+Host Objects
+
+Host objects are specific to the environment where the JavaScript code is running. They are not part of the core JavaScript language specification and may vary depending on the host. 
+Availability: Dependent on the specific host environment.
+Definition: Not defined in the ECMAScript specification, but in separate specifications like the DOM specification (MDN Web Docs) in browsers or the Node.js documentation (nodejs.org) for Node.js.
+
+Examples:
+
+In a web browser:
+
+window
+document
+location
+history
+XMLHttpRequest
+DOM nodes
+
+In Node.js:
+
+process
+http
+fs (file system module) 
+
+-----------------------------------------------
+
+GEC/GE  --> this (keyword) -> points to some object
+
+
+-----------------------------------------------
+
+"use Strict";
+
+-----------------------------------------------
+
+Inheritance --> OOPs -> C# , JavaScript
+
+In JS -> Prototypical Inheritance
+
+Object -> 1 -> 2

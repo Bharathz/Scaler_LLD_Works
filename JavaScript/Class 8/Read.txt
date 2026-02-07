@@ -37,4 +37,9 @@ Set
 weak map
 weak Set
 
+Hoisting
 
+var,let,const --> hoisted
+
+var -> hoisted normally (global)
+let,const -> temporal deadzone -> its hoisted but not accessable (blocked with scope)
