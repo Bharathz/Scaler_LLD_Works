@@ -75,3 +75,17 @@ Inheritance --> OOPs -> C# , JavaScript
 In JS -> Prototypical Inheritance
 
 Object -> 1 -> 2
+
+-----------------------------------------------
+
+
+Why JS is slow:
+
+Dynamic typing is onw of the reason
+Single threaded
+Algorithms that build is not efficient (DOM - CRT)
+Garbage collection
+
+-----------------------------------------------
+
+Heap Area -> HLD : RAM  | Ref type object | Bigger DS

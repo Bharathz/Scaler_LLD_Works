@@ -24,3 +24,9 @@ Array.prototype.sum = function(){
     }
     console.log(sum);
 }
+
+const arr=[1,2,3,4,5];
+arr.sum(); // Output: 15
+
+const arr2=[10,20,30];
+arr2.sum(); // Output: 60

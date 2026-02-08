@@ -15,3 +15,23 @@ const ironman = {
   name: "Tony Strac",
   team: "Iron Man",
 };
+
+// this - ironman while using cap.petersteam
+
+// call, apply, bind
+// function borrowing from the object and help us with chaning this object
+
+cap.petersTeam.call(ironman, "Nayak", "Adil");
+cap.petersTeam.apply(ironman, ["Nayak", "Adil"]);
+
+// bind  = store a function which is binded with this context( what ever context you prefer)
+// When we want to use the method multiple times.
+
+const ironManStoleCapTeamFunc = cap.petersTeam.bind(ironman);
+
+console.log(ironManStoleCapTeamFunc);
+
+ironManStoleCapTeamFunc("Deen", "Dayal");
+ironManStoleCapTeamFunc("Deen", "Dayal");
+ironManStoleCapTeamFunc("Deen", "Dayal");
+ironManStoleCapTeamFunc("Deen", "Dayal");

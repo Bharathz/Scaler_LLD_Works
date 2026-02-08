@@ -1,0 +1,10 @@
+Agenda:
+
+Polyfills:
+Rest, Spread / Both are same
+Default parameter
+
+Pass by vale/Ref
+shallow clone/deep clone
+
+---------------------------------------------
