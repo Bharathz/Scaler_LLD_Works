@@ -51,3 +51,47 @@ console.log(arr5);  // [1,[2,3,6,7],4,5,0]
 console.log(arr6);  // [1,[2,3,6,7],4,5,200] 
 //  arr6 is not affected by the push to arr5 because it is a shallow copy, 
 // but the nested array is shared between arr5 and arr6, so changes to the nested array will affect both arr5 and arr6.
+
+//Deep cloning 
+// Deep cloning means creating a new object or array that is completely independent of the original, including all nested objects and arrays. 
+// This can be achieved using JSON.parse() and JSON.stringify() methods, or using a library like Lodash.
+// JSON.stringify() converts a JavaScript object or array into a JSON string, and 
+// JSON.parse() converts a JSON string back into a JavaScript object or array.
+
+const arr7 = [1,[2,3],4,5];
+const arr8 = JSON.parse(JSON.stringify(arr7));
+arr8[1].push(6);
+console.log(arr7); // [1,[2,3],4,5]
+console.log(arr8); // [1,[2,3,6],4,5]
+arr7[1].push(7);
+console.log(arr7); // [1,[2,3,7],4,5]
+console.log(arr8); // [1,[2,3,6],4,5]
+
+console.log(typeof JSON.stringify(arr7), typeof JSON.parse(JSON.stringify(arr7)), typeof arr7, arr7); // string object object
+
+//--------------------------------------------------------------
+
+//rest parameter - allows a function to accept an indefinite number of arguments as an array, 
+// providing a way to represent variadic functions in JavaScript.
+//array , object - rest parameter must be the last parameter in the function definition, and it will collect all remaining arguments into an array.
+
+function func(param1,...param2){
+    console.log("Hi Params are", param1, param2); // output: Hi Params are Hello [ 'Welcome', 'to', 'JavaScript', [ 1, 2, 3, 4, 5 ] ]
+}
+func("Hello", "Welcome", "to", "JavaScript", [1,2,3,4,5]);
+
+//--------------------------------------------------------------
+
+const obj={
+    name:"steave",
+    age:30,
+    great: function(){
+        console.log("Hello Everyone");
+    },
+};
+const jsonString = JSON.stringify(obj);
+console.log(jsonString); 
+// {"name":"steave","age":30} - function is not included in the JSON string because functions cannot be serialized to JSON.
+console.log(typeof jsonString); // string
+console.log(JSON.parse(jsonString)); // { name: 'steave', age: 30 } 
+console.log(typeof JSON.parse(jsonString)); // object

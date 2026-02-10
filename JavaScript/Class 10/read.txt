@@ -8,3 +8,29 @@ Pass by vale/Ref
 shallow clone/deep clone
 
 ---------------------------------------------
+
+non premitive datatype (#ref address)
+
+---------------------------------------------
+
+Premitives are stored in stack itself -> passed by value
+
+Non premitives are stored in heap -> pass by reference
+
+there are creaded this was instead of object is because of memory usecase - to same memory
+
+---------------------------------------------
+
+Pollyfills 
+
+Why do we need polyfills?
+Most cases we no need to use one but system like legacy, that may not be usng the latest features where we can use the polyfills where browser is not compatable.
+
+External JS library -> Jquery
+
+arr.push(---)
+
+Array.prototype.push = ....
+
+
+
