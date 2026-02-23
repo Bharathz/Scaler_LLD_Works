@@ -32,5 +32,7 @@ arr.push(---)
 
 Array.prototype.push = ....
 
+---------------------------------------------
 
+Lodash is used to deep copy -> package is heavy 
 

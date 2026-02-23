@@ -95,3 +95,6 @@ console.log(jsonString);
 console.log(typeof jsonString); // string
 console.log(JSON.parse(jsonString)); // { name: 'steave', age: 30 } 
 console.log(typeof JSON.parse(jsonString)); // object
+
+//rest, spread
+// Shallow copy, deep copy

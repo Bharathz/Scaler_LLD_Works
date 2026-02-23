@@ -1,0 +1,10 @@
+
+... -> used for deconstruction
+rest operator -> used in fn
+spread operator -> used to get all Array
+
+Pass by value and ref both are supported in JS
+
+Polyfills of call, apply and bind
+
+Symbol() -> returns unique key
