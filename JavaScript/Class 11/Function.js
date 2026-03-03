@@ -31,3 +31,30 @@ const obj1={
 
 obj.abc1();
 obj1.abc2();
+
+//HOF : Higher order function
+//Function which can either or both accept and return function
+
+// the function which is passed as an argument is called callback function
+//abc -> callback function
+//HOF -> cdf 
+
+function cdf(abc){
+    abc();
+}
+
+cdf(abc1);
+
+
+// Array -> map, filter , reduce , find -> HOF operations
+
+
+const cap = {
+  name: "steve",
+  sayHi: function () {
+    console.log("Hi from", this.name);
+  },
+};
+cap.sayHi(); // steve
+const sayHiAdd = cap.sayHi;
+sayHiAdd();
