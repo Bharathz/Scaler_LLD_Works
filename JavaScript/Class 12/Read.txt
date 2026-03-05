@@ -1,0 +1,32 @@
+Object oriented Paradigm --> famous 90 to 2026
+
+Javascript -> functions  (initially not ment for oops)
+
+when JS ES6 -> Let, const, class -> keywords were introduced
+class is a way to create a object.
+
+why and when we need object?
+Analogy:
+Socity -> 50 floors
+-> 2bhk -> Design 2bhk
+-> 3 Bhk -> Design 3bhk
+
+Car factory -> Creta -> Design once -> Create out of it for n cars
+
+Simillarly we will have n objects -> Variables and functions
+
+{
+    x:1;
+    y:function(){
+
+    }
+}
+
+Class is a key word that creates a template/blueprint -> objects uses the blueprint
+
+ES6 -> class syntatic sugar over (topic)
+
+when we use new keyword it creates a heap in memory for an object
+it triggers constructor function
+
+[]-> Array -> object   // inheritance will work in this level
