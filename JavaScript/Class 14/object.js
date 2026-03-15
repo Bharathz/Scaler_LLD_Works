@@ -60,7 +60,67 @@ const desc=Object.getOwnPropertyDescriptor(newObj,"name");
 console.log(desc);
 //op: {value: 'Monkey D Luffy', writable: true, enumerable: true, configurable: true}
 
-for (let key in newObj){
+delete newObj.name; //op: name will be deleted because it is configurable
+console.log(newObj); //op: {}
+// for (let key in newObj){
+//     console.log(key); //op: name
+//     console.log(newObj[key]); //op: Monkey D Luffy
+// }
+
+
+//writable: true, //op: value can be changed
+//enumerable: true, //op: property will be listed in for...in loop and Object.keys()
+//configurable: true //op: property can be deleted or changed to accessor property
+
+
+//1. writable: false, enumerable: true, configurable: true
+
+//use case : when we want to create a property that cannot be changed but can 
+// be listed in for...in loop and Object.keys() and 
+// can be deleted or changed to accessor property
+
+const obj2={};
+Object.defineProperty(obj2,"name",{
+    value:"Zoro",
+    writable:false,
+    enumerable:true,
+    configurable:true
+});
+obj2.name="Sanji"; //op: name will not change because writable is false
+console.log(" 1. writable:false,enumerable:true,configurable:true");
+console.log(obj2); //op: Zoro
+
+//2. writable: true, enumerable: false, configurable: true
+
+//use case : when we want to create a property that can be changed but 
+// cannot be listed in for...in loop and Object.keys() but can be 
+// deleted or changed to accessor property
+
+Object.defineProperty(obj2,"age",{
+    value:25,
+    writable:true,
+    enumerable:false,
+    configurable:true
+});
+console.log("2. writable:true,enumerable:false,configurable:true");
+console.log(obj2); //op: 25
+
+for (let key in obj2){
     console.log(key); //op: name
-    console.log(newObj[key]); //op: Monkey D Luffy
+    console.log(obj2[key]); //op: Zoro
 }
+
+//3. writable: true, enumerable: true, configurable: false
+//use case : when we want to create a property that can be changed and 
+// can be listed in for...in loop and Object.keys() but cannot be 
+// deleted or changed to accessor property
+
+Object.defineProperty(obj2,"hobby",{
+    value:"Swordsman",
+    writable:true,
+    enumerable:true,
+    configurable:false
+});
+delete obj2.hobby; //op: hobby will not be deleted because configurable is false
+console
+console.log(obj2); //op: {name: 'Zoro', age: 25, hobby: 'Swordsman'}
