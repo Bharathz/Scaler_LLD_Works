@@ -124,3 +124,13 @@ Object.defineProperty(obj2,"hobby",{
 delete obj2.hobby; //op: hobby will not be deleted because configurable is false
 console
 console.log(obj2); //op: {name: 'Zoro', age: 25, hobby: 'Swordsman'}
+
+
+//Real time use case:
+//1. Object.freeze() can be used to create a constant object that cannot be changed throughout the program.
+//2. Object.seal() can be used to create an object that can be modified but cannot have new properties added to it, which can be useful for creating a configuration object that should not be extended.
+//3. Object.defineProperty() can be used to create a property with specific attributes, such as making it read-only or non-enumerable, which can be useful for creating a property that should not be changed or listed in a loop.
+
+// id : writable: false, configurable: false, enumerable: true
+// _password_: writable: false, configurable: false, enumerable: false
+
