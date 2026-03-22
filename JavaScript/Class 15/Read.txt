@@ -1,0 +1,6 @@
+Asyncronous code
+
+
+Event loop
+
+sync+async => Call stack

@@ -52,7 +52,12 @@
 console.log("Before");
 const cb2 = () => {
     console.log("set timeout 1");
+    let timeInFuture = Date.now() + 5000;
+    while(Date.now() < timeInFuture){
+        // do nothing
+    }
     // while(1){}
+     console.log("set timeout 2");
 };
 
 const cb1 = () => console.log("Hello");
