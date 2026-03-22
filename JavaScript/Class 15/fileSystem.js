@@ -23,8 +23,34 @@ const fs = require('fs');
 
 
 //Parallel execution of asynchronous code
+// console.log("Before");
+// const buffer1 = fs.readFileSync('./f1.txt');
+// const buffer2 = fs.readFileSync('./f2.txt');
+// console.log(buffer1.toString(), buffer2.toString());
+// console.log("After");
+
+
+//parallel and use the output and do some operation on it
 console.log("Before");
-const buffer1 = fs.readFileSync('./f1.txt');
-const buffer2 = fs.readFileSync('./f2.txt');
-console.log(buffer1.toString(), buffer2.toString());
+
+const cb1=function(err, data){
+    if(err){
+        console.log("Error : ", err);
+        return;
+    }
+
+    const content1 = data.toString();
+    fs.readFile('./f2.txt', function(err, data){
+        if(err){
+            console.log("Error : ", err);
+            return;
+        }
+        const content2 = data.toString();
+        console.log(content1, content2);
+    });
+};
+
+fs.readFile('./f1.txt', cb1);
+
 console.log("After");
+    
