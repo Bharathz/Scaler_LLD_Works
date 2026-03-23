@@ -1,0 +1,9 @@
+1.Asyncronous
+2.Promise
+3.Micro Task
+
+Mock Interview js
+
+1.Async js
+2.Problem curring, closures,polyfills
+3.Other basic concepts
