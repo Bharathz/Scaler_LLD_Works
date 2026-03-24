@@ -6,15 +6,15 @@ const fs = require("fs");
 // 2. Fulfilled: The state of a promise representing a successful operation. The promise has a value.
 // 3. Rejected: The state of a promise representing a failed operation. The promise has a reason for the failure.
 
-// console.log("Before");
+console.log("Before");
 
-// const promise = fs.promises.readFile("./f1.txt");
-// console.log(promise);
-// console.log("After");
+const promise = fs.promises.readFile("./f1.txt");
+console.log(promise);
+console.log("After");
 
-// setTimeout(()=>{
-//     console.log(promise);
-// },2000);
+setTimeout(()=>{
+    console.log(promise);
+},2000);
 
 // A promise is a proxy for a value not necessarily known when the promise is created. 
 // It allows you to associate handlers with an asynchronous action's eventual success value or failure reason. 
@@ -53,3 +53,36 @@ promise.then(function(data){
 }).finally(function(){
     console.log("Promise is settled");
 });
+
+
+
+function promiseReadFile(filePath){
+    return new Promise(function(resolve,reject){
+        fs.readFile(filePath,function(err,data){
+            if(err) {
+                reject(err);
+            } else {
+                resolve(data);
+            }
+        });
+    });
+}
+
+promiseReadFile("./f1.txt").then((future)=>{
+    console.log(future.toString());
+    return promiseReadFile("./f2.txt")
+})
+.then(future=>{
+    console.log(future.toString());
+    return promiseReadFile("./f3.txt")
+})
+.then(future=>{
+    console.log(future.toString());
+    return promiseReadFile("./f4.txt")
+})
+.then(future=>{
+    console.log(future.toString());
+})
+.catch(err=>{
+    console.log("Error: " , err);
+})
