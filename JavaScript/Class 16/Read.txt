@@ -7,3 +7,18 @@ Mock Interview js
 1.Async js
 2.Problem curring, closures,polyfills
 3.Other basic concepts
+
+
+//Promise -> 
+Future Event : can be sucessful/fail
+
+JS -> Object -> 
+{
+    value : error/unidentified/data
+    state: pending/fulfilled/rejected
+}
+
+//Micro Queues
+
+Micro Queues >> Promise
+

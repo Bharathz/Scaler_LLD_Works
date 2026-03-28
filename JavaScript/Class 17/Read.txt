@@ -1,0 +1,23 @@
+Async => Callback -> Promise
+-Better code (inversion of control)
+- A Future event (resolve/reject in value)
+
+{
+value: undefined, value(data), error
+status: pending, settled(resolved),rejected
+}
+
+
+Promises:
+-Producer (fs : readfile, new Promise(-> fn))
+-consumer (Success -> then , Failure -> catch , finally)
+
+
+// Promise (static)
+
+All
+All settled
+Race
+Any
+
+all of it stored in array
