@@ -21,3 +21,6 @@ Race
 Any
 
 all of it stored in array
+
+[p1,p2,p3,p4].all() - only if all promise are resolved or else rejected
+[p1,p2,p3,p4].allsettled() -> 
