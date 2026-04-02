@@ -15,10 +15,10 @@ Promises:
 
 // Promise (static)
 
-All
+All -> all or none
 All settled
-Race
-Any
+Race -> the one that come first
+Any -> first success
 
 all of it stored in array
 

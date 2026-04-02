@@ -1,3 +1,4 @@
+// A simple implementation of a Promise polyfill
 const STATUS = {
   PENDING: "pending",
   RESOLVED: "resolved",
