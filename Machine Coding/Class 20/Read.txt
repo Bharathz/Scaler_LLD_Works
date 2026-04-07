@@ -1,0 +1,1 @@
+Browser -> SW app to access info over web and present it in human readable language.
