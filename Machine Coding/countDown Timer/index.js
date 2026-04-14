@@ -99,7 +99,7 @@ function updateUIEverySec(countDownTime) {
 }
 
 function validateInput(mins, hrs, secs) {
-  if (mins === 0 && hrs === 0 && secs == 0) {
+  if (mins === 0 && hrs === 0 && secs === 0) {
     alert("please enter valid time");
     return false;
   }
