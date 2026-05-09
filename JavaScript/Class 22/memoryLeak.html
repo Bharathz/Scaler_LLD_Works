@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memory Leak</title>
+  </head>
+  <body>
+    <h1>Memory Leaks USecases</h1>
+  </body>
+  <script>
+    // function example() {
+    //   globalVar = 15;
+    //   let localvar = 20;
+    //   console.log(globalVar);
+    // }
+    // example();
+    // console.log(globalVar);
+    // console.log("end of the file");
+
+    // let intervalRef;
+    // function startLeaking() {
+    //   let largeObject = new Array(10000000).fill("Leak");
+
+    //   intervalRef = setInterval(() => {
+    //     console.log(largeObject.length);
+    //   }, 1000);
+    // }
+
+    // startLeaking();
+
+    // setTimeout(() => {
+    //   clearInterval(intervalRef);
+    // }, 10000);
+
+    let h1 = document.querySelector("h1");
+    h1.remove();
+    console.log(h1);
+    h1 = null;
+    console.log(h1);
+  </script>
+</html>
+<!-- 
+what this code does?
+
+This code demonstrates a memory leak scenario in JavaScript. 
+It creates a large object (an array filled with "Leak") and 
+sets up an interval to log its length every second. 
+Even after the interval is cleared, the large object remains in memory 
+because the interval's callback function still holds a reference to it.
+This prevents the garbage collector from freeing up the memory used by the large object, 
+leading to a memory leak. 
+
+What is memory leak?
+It occurs when a program retains references to objects that are no longer needed, 
+preventing the garbage collector from freeing up memory, 
+which can lead to increased memory usage and potential performance issues
+
+how it occurs?
+When a program creates objects and retains references to them, 
+even after they are no longer needed.
+
+how to avoid?
+It can be prevented by ensuring that references to objects are properly 
+released when they are no longer needed, to archive that 
+we can use clearInterval, clearTimeout, removeEventListener, etc.
+-->
